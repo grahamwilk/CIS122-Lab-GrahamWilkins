@@ -2,6 +2,12 @@
 northwind1/bin/
 northwind1/obj/
 northwind1/Properties/
+northwind app/bin/
+northwind app/obj/
+northwind app/Properties/
+northwind app/wwwroot/
+*.user
+
 .vs/
 
 # Ignore config files

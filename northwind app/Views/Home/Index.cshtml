@@ -1,0 +1,267 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<table border="1">
+    <tr>
+        <th>Supplier ID</th>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+        <th>Contact Title</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Region</th>
+        <th>Postal Code</th>
+        <th>Country</th>
+        <th>Phone</th>
+        <th>Fax</th>
+        <th>Home Page</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfSuppliers)
+    {
+
+        <tr>
+            <td>@p.SupplierId</td>
+            <td><a href="">@p.CompanyName</a></td>
+            <td>@p.ContactName</td>
+            <td>@p.ContactTitle</td>
+            <td>@p.Address</td>
+            <td>@p.City</td>
+            <td>@p.Region</td>
+            <td>@p.PostalCode</td>
+            <td>@p.Country</td>
+            <td>@p.Phone</td>
+            <td>@p.Fax</td>
+            <td>@p.HomePage</td>
+        </tr>
+
+    }
+
+</table>
+
+<table border="1">
+    <tr>
+        <th>Shipper ID</th>
+        <th>Company Name</th>
+        <th>Phone</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfShippers)
+    {
+
+        <tr>
+            <td>@p.ShipperId</td>
+            <td><a href="">@p.CompanyName</a></td>
+            <td>@p.Phone</td>
+        </tr>
+
+    }
+
+</table>
+
+<table border="1">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Supplier ID</th>
+        <th>Category ID</th>
+        <th>Quantity Per Unit</th>
+        <th>Unit Price</th>
+        <th>Units In Stock</th>
+        <th>Units On Order</th>
+        <th>Reorder Level</th>
+        <th>Discontinued?</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfProducts)
+    {
+
+        <tr>
+            <td>@p.ProductId</td>
+            <td>@p.ProductName</td>
+            <td>@p.SupplierId</td>
+            <td>@p.CategoryId</td>
+            <td>@p.QuantityPerUnit</td>
+            <td>@p.UnitPrice</td>
+            <td>@p.UnitsInStock</td>
+            <td>@p.UnitsOnOrder</td>
+            <td>@p.ReorderLevel</td>
+            <td>@p.Discontinued</td>
+        </tr>
+
+    }
+
+</table>
+
+<table border="1">
+    <tr>
+        <th>Order ID</th>
+        <th>Product ID</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>Discount</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfOrderDetails)
+    {
+
+        <tr>
+            <td>@p.OrderId</td>
+            <td>@p.ProductId</td>
+            <td>@p.UnitPrice</td>
+            <td>@p.Quantity</td>
+            <td>@p.Discount</td>
+        </tr>
+
+    }
+
+</table>
+@*
+    commented out since we don't have a Order csv yet.
+<table border="1">
+    <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Employee ID</th>
+        <th>Order Date</th>
+        <th>Required Date</th>
+        <th>Shipped Date</th>
+        <th>Ship Via</th>
+        <th>Freight</th>
+        <th>Ship Name</th>
+        <th>Ship Address</th>
+        <th>Ship City</th>
+        <th>Ship Region</th>
+        <th>Ship Postal Code</th>
+        <th>Ship Country</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfOrders)
+    {
+
+        <tr>
+            <td>@p.OrderId</td>
+            <td>@p.CustomerId</td>
+            <td>@p.EmployeeId</td>
+            <td>@p.OrderDate</td>
+            <td>@p.RequiredDate</td>
+            <td>@p.ShippedDate</td>
+            <td>@p.ShipVia</td>
+            <td>@p.Freight</td>
+            <td>@p.ShipName</td>
+            <td>@p.ShipAddress</td>
+            <td>@p.ShipCity</td>
+            <td>@p.ShipRegion</td>
+            <td>@p.ShipPostalCode</td>
+            <td>@p.ShipCountry</td>
+        </tr>
+
+    }
+
+</table>*@
+
+<table border="1">
+    <tr>
+        <th>Employee ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Title</th>
+        <th>Title of Courtesy</th>
+        <th>Birth Date</th>
+        <th>Hire Date</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Region</th>
+        <th>Postal Code</th>
+        <th>Country</th>
+        <th>Home Phone</th>
+        <th>Extension</th>
+        <th>Notes</th>
+        <th>Reports To</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfEmployees)
+    {
+
+        <tr>
+            <td>@p.EmployeeId</td>
+            <td>@p.FirstName</td>
+            <td>@p.LastName</td>
+            <td>@p.Title</td>
+            <td>@p.TitleOfCourtesy</td>
+            <td>@p.BirthDate</td>
+            <td>@p.HireDate</td>
+            <td>@p.Address</td>
+            <td>@p.City</td>
+            <td>@p.Region</td>
+            <td>@p.PostalCode</td>
+            <td>@p.Country</td>
+            <td>@p.HomePhone</td>
+            <td>@p.Extension</td>
+            <td>@p.Notes</td>
+            <td>@p.ReportsTo</td>
+        </tr>
+
+    }
+
+</table>
+@*
+<table border="1">
+    <tr>
+        <th>Customer ID</th>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+        <th>Contact Title</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Region</th>
+        <th>Postal Code</th>
+        <th>Country</th>
+        <th>Phone</th>
+        <th>Fax</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfCustomers)
+    {
+
+        <tr>
+            <td>@p.CustomerId</td>
+            <td><a href="">@p.CompanyName</a></td>
+            <td>@p.ContactName</td>
+            <td>@p.ContactTitle</td>
+            <td>@p.Address</td>
+            <td>@p.City</td>
+            <td>@p.Region</td>
+            <td>@p.PostalCode</td>
+            <td>@p.Country</td>
+            <td>@p.Phone</td>
+            <td>@p.Fax</td>
+        </tr>
+
+    }
+
+</table>
+*@
+
+<table border="1">
+    <tr>
+        <th>Category ID</th>
+        <th>Category Name</th>
+        <th>Description</th>
+    </tr>
+
+    @foreach (var p in ViewBag.ListOfCategories)
+    {
+
+        <tr>
+            <td>@p.CategoryId</td>
+            <td>@p.CategoryName</td>
+            <td>@p.Description</td>
+        </tr>
+
+    }
+
+</table>
